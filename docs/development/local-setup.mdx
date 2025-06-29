@@ -56,7 +56,7 @@ cd browser-use
 1. Create and activate a virtual environment:
 
 ```bash
-uv venv
+uv venv --python 3.11
 source .venv/bin/activate
 ```
 
@@ -64,7 +64,7 @@ source .venv/bin/activate
 
 ```bash
 # Install the package in editable mode with all development dependencies
-uv sync --all-extras --upgrade
+uv sync --all-extras
 
 # Install the default browser
 playwright install chromium --with-deps --no-shell
@@ -94,9 +94,8 @@ BROWSER_USE_LOGGING_LEVEL=debug  # Helpful for development
 ```
 
 <Note>
-  You can use any LLM model supported by LangChain. See 
-  [LangChain Models](/customize/supported-models) for available options and their specific
-  API key requirements.
+  See [Supported Models](/customize/supported-models) for available LLM options
+  and their specific API key requirements.
 </Note>
 
 ## Development
@@ -154,6 +153,7 @@ If you run into any issues:
 2. Join our [Discord community](https://link.browser-use.com/discord) for support
 
 <Note>
-  We welcome contributions! See our [Contribution Guide](/development/contribution-guide) for guidelines on how to help improve
+  We welcome contributions! See our [Contribution
+  Guide](/development/contribution-guide) for guidelines on how to help improve
   Browser Use.
 </Note>
